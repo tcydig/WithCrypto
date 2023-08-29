@@ -1,0 +1,27 @@
+.gradient {
+    &__wrap {
+      height: 50vh;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__title {
+      animation: AnimationTitle 5s ease infinite;
+      background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+      background-size: 200% 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      
+      font-size: 12vw;
+      font-family: KontanterBold;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+  @keyframes AnimationTitle {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
