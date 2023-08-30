@@ -1,6 +1,6 @@
 .gradient {
     &__wrap {
-      height: 50vh;
+      height: 40vh;
       
       display: flex;
       align-items: center;
@@ -25,3 +25,42 @@
       50%{background-position:100% 50%}
       100%{background-position:0% 50%}
   }
+.aboutme {
+  &__wrap {
+    display: flex;
+    flex-flow: column;
+  }
+  &__title {
+    color: white;
+    text-align: center;
+    font-family: KontanterBold;
+    font-size: 5vw;
+  }
+  &__description {
+    margin:3em auto;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    line-height:1.4em;
+  }
+}
+
+.coder {
+  &__wrap {
+    display: flex;
+    flex-flow: column;
+  }
+  &__title {
+    color: white;
+    text-align: center;
+    font-family: KontanterBold;
+    font-size: 5vw;
+  }
+  &__description {
+    margin:3em auto;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    line-height:1.4em;
+  }
+}
