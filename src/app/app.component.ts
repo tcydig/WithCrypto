@@ -10,6 +10,7 @@ import { filter, map, mergeMap } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'WithCrypto';
   constructor(public router: Router, private route: ActivatedRoute, private titleService: Title, private meta: Meta) {}
 
   ngOnInit() {
