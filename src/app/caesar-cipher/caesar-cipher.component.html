@@ -1,1 +1,55 @@
-<p>caesar-cipher works!</p>
+<div class="base__wrap">
+    <div class="title">シーザー暗号（カエサル式暗号/シフト暗号）</div>
+    <div class="form__box">
+        <form class="crypto-form">
+            <mat-form-field>
+                <mat-select [formControl]="shiftForm" value=0 required>
+                <div *ngFor="let n of shiftNumber">
+                    <mat-option value={{n}}>{{n}}</mat-option>
+                </div>
+                </mat-select>
+                <mat-label>シフト数</mat-label>
+                <mat-hint style="color: white;">0は一括で全シフト数検証</mat-hint>
+                <mat-error *ngIf="shiftForm.invalid">{{getErrorMessageInSelectShiftNumber()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>平文 or 暗号文</mat-label>
+                <textarea type="text" #textFlatCrypto matInput [maxlength]="500" placeholder="暗号化したい平文 or 平文に直したい暗号文 を記載（半角英字/空文字のみ）" [formControl]="textForm" pattern="^[a-zA-Z\s]*$" (input)="onInput($event)" required></textarea>
+                <mat-hint align="end" style="color: white;">{{textFlatCrypto.value.length || 0}}/500</mat-hint>
+                <mat-error *ngIf="textForm.invalid">{{getErrorMessageInTextArea()}}</mat-error>
+              </mat-form-field>
+
+            <div class="button-row">
+              <button mat-flat-button color="primary" type='submit' name="analysis" value="encode" [disabled]="isDisable || textForm.invalid || shiftForm.invalid" (click)="onEncode()">Encode</button>
+              <button mat-flat-button color="warn" type='submit' name="analysis" value="decode" [disabled]="isDisable || textForm.invalid || shiftForm.invalid" (click)="onDecode()">Decode</button>
+            </div>
+        </form>
+    </div>
+    <div class="result__wrap">
+        <div class="result">解析結果</div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 result-table">
+            <!-- shift Column -->
+            <ng-container matColumnDef="result-shift">
+              <th mat-header-cell *matHeaderCellDef> シフト数 </th>
+              <td mat-cell *matCellDef="let element"> {{element.shift}} </td>
+            </ng-container>
+          
+            <!-- flat Column -->
+            <ng-container matColumnDef="result-flat">
+              <th mat-header-cell *matHeaderCellDef> 平文 </th>
+              <td mat-cell *matCellDef="let element"> {{element.flat}} </td>
+            </ng-container>
+          
+            <!-- crypto Column -->
+            <ng-container matColumnDef="result-crypto">
+              <th mat-header-cell *matHeaderCellDef> 暗号文 </th>
+              <td mat-cell *matCellDef="let element"> {{element.crypto}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+
+    
+</div>

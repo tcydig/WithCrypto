@@ -1,0 +1,64 @@
+.base__wrap {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+.title {
+    font-size:min(4vw,50px);
+    position: relative;
+    margin-top: max(10vw,100px);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.form__box {
+    position: relative;
+    margin-top: 6vw;
+}
+
+.crypto-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+
+.button-row button{
+    margin-right: 8px;
+  }
+
+.result {
+    font-size:min(4vw,50px);
+    position: relative;
+    margin-top: 5vw;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.result-table {
+    width: 100%;
+    position: relative;
+    margin-top: 5vw;
+    table-layout: fixed;
+    word-wrap: break-word;
+  }
+  
+  .mat-column-result-shift {
+    width: 100px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+  .mat-column-result-flat {
+    padding-left: 12px;
+    font-size: 20px;
+  }
+  
+  .mat-column-result-crypto {
+    font-size: 20px;
+  }
