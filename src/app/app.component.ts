@@ -17,10 +17,6 @@ export class AppComponent {
     path: '../assets/Animation - 1693556957349.json',
   };
 
-  animationCreated(animationItem: AnimationItem): void {
-    console.log(animationItem);
-  }
-
   title = 'WithCrypto';
   constructor(public router: Router, private route: ActivatedRoute, private titleService: Title, private meta: Meta) {}
 
