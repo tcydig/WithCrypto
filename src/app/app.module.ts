@@ -14,6 +14,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 
+// lazy load
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,8 @@ import {MatListModule} from '@angular/material/list';
     MatTabsModule,
     MatDividerModule,
     MatListModule,
-    CaesarCipherComponent
+    CaesarCipherComponent,
+    LazyLoadImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

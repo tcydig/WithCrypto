@@ -9,6 +9,7 @@
         font-display: swap;
     }
 </style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"></script>
 
 <div class="home__wrap">
     <div class="gradient">
@@ -48,12 +49,12 @@
         <div class="contactme__box">
             <div class="contactme__box__item">
                 <a href="https://twitter.com/erupisu4869062" target="_blank" rel="noopener noreferrer">
-                    <img src="../../assets/2021 Twitter logo - blue.png" style="width: min(12vw,150px);height: min(12vm,150px);">
+                    <img lazyLoad="../../assets/2021 Twitter logo - blue.png" style="width: min(12vw,150px);height: min(12vm,150px);">
                 </a>
             </div>
             <div class="contactme__box__item">
                 <a href="https://www.linkedin.com/in/daigo-tsuchiya-452520261/" target="_blank" rel="noopener noreferrer">
-                    <img src="../../assets/LI-In-Bug.png" style="width: min(12vw,150px);height: min(12vm,150px);">
+                    <img lazyLoad="../../assets/LI-In-Bug.png" style="width: min(12vw,150px);height: min(12vm,150px);" />
                 </a>
             </div>
         </div>
@@ -68,3 +69,7 @@
     </div>
 </div>
 
+
+<script>
+    lazyload();
+</script>
