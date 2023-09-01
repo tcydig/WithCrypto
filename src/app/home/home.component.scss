@@ -13,529 +13,182 @@
   margin-left: 5vw;
   margin-right: 5vw;
 }
+
+.title_font {
+  font-family: KontanterBold;
+}
+
+.common_gradient_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.animation_gradient {
+  animation: AnimationTitle 5s ease infinite;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+@keyframes AnimationTitle {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.common_wrap {
+  display: flex;
+  flex-flow: column;
+}
+
+.common_text_color_position {
+  color: white;
+  text-align: center;
+}
   
 /* 〜479px：SP縦
 ------------------------------ */
 .gradient {
   &__wrap {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
     margin-top: 10vh;
   }
   &__title {
-    animation: AnimationTitle 5s ease infinite;
-    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-    background-size: 200% 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    
-    font-size: 20vw;
-    font-family: KontanterBold;
     font-weight: 600;
+    font-size: 20vw;
     line-height: 1;
   }
 }
-@keyframes AnimationTitle {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
 .aboutme {
-&__wrap {
-  display: flex;
-  flex-flow: column;
-  margin-top: 15vh;
-}
-&__title {
-  color: white;
-  text-align: center;
-  font-family: KontanterBold;
-  font-size:5vw
-}
-&__description {
-  margin:3em auto;
-  color: white;
-  text-align: center;
-  font-size: 2vw;
-  font-size:max(2vw,15px);
-  line-height:1.4em;
-  width: 70%;
-}
-}
-
-.coder {
-&__wrap {
-  display: flex;
-  flex-flow: column;
-  margin-top: 15vh;
-}
-&__title {
-  color: white;
-  text-align: center;
-  font-family: KontanterBold;
-  font-size: 5vw;
-  margin-bottom: 1em;
-}
-&__description {
-  color: white;
-  text-align: center;
-  font-size: 2vw;
-  line-height:1.4em;
-}
-}
-
-.withyou {
-&__wrap {
-  display: flex;
-  flex-flow: column;
-  position: relative;
-  margin-top: 15vh;
-}
-&__title {
-  color: white;
-  text-align: center;
-  font-family: KontanterBold;
-  font-size: 5vw;
-}
-&__description {
-  margin:3em auto;
-  color: white;
-  text-align: center;
-  font-size:max(2vw,15px);
-  line-height:1.4em;
-  width: 70%;
-}
-}
-
-.contactme {
-&__wrap {
-  display: flex;
-  flex-flow: column;
-  margin-top: 15vh;
-}
-&__title {
-  color: white;
-  text-align: center;
-  font-family: KontanterBold;
-  font-size: 5vw;
-}
-&__subtitle {
-  margin:1em auto;
-  color: white;
-  text-align: center;
-  font-size: 6vw;
-}
-&__box {
-  padding: 10px;
-  display: flex;
-  justify-content:center;
-  &__item {
-    padding: 10px;
-    color: white;
-    margin: 10px;
-    font-size: 5vw;
+  &__wrap {
+    margin-top: 15vh;
+  }
+  &__title {
+    font-size:5vw
+  }
+  &__description {
+    margin:3em auto;
+    font-size:max(2vw,15px);
+    line-height:1.4em;
+    width: 70%;
   }
 }
+.coder {
+  &__wrap {
+    margin-top: 15vh;
+  }
+  &__title {
+    font-size:min(5vw,100px);
+    margin-bottom: 1em;
+  }
+  &__description {
+    font-size: 2vw;
+    line-height:1.4em;
+  }
 }
-  
+.withyou {
+  &__wrap {
+    margin-top: 15vh;
+  }
+  &__title {
+    font-size:min(5vw,100px);
+  }
+  &__description {
+    margin:3em auto;
+    font-size:max(2vw,15px);
+    line-height:1.4em;
+    width: 70%;
+  }
+}
+.contactme {
+  &__wrap {
+    margin-top: 15vh;
+  }
+  &__title {
+    font-size:min(5vw,100px);
+  }
+  &__subtitle {
+    margin:1em auto;
+    font-size: 6vw;
+  }
+  &__box {
+    padding: 10px;
+    display: flex;
+    justify-content:center;
+    &__item {
+      padding: 10px;
+      color: white;
+      margin: 10px;
+      font-size: min(5vw,70px);
+    }
+  }
+} 
 /* 480px〜599px：SP横
 ------------------------------ */
 @media screen and (min-width:480px) and (max-width:599px) { 
   .gradient {
       &__wrap {
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
         margin-top: 5vh;
       }
       &__title {
-        animation: AnimationTitle 5s ease infinite;
-        background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-        background-size: 200% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        
         font-size: 12vw;
-        font-family: KontanterBold;
         font-weight: 600;
         line-height: 1;
       }
     }
-    @keyframes AnimationTitle {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
   .aboutme {
     &__wrap {
-      display: flex;
-      flex-flow: column;
       margin-top: 4vh;
     }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__description {
-      margin:3em auto;
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-      width: 70%;
-    }
   }
-  
   .coder {
     &__wrap {
-      display: flex;
-      flex-flow: column;
       margin-top: 4vh;
     }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-      margin-bottom: 1em;
-    }
-    &__description {
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-    }
   }
-  
   .withyou {
     &__wrap {
-      display: flex;
-      flex-flow: column;
-      position: relative;
       margin-top: 4vh;
     }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__description {
-      margin:3em auto;
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-      width: 70%;
-    }
   }
-  
   .contactme {
     &__wrap {
-      display: flex;
-      flex-flow: column;
       margin-top: 4vh;
     }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__subtitle {
-      margin:1em auto;
-      color: white;
-      text-align: center;
-      font-size: 6vw;
-    }
-    &__box {
-      padding: 10px;
-      display: flex;
-      justify-content:center;
-      &__item {
-        padding: 10px;
-        color: white;
-        margin: 10px;
-        font-size: 5vw;
-      }
-    }
   }
-}
-  
+} 
 /* 600px〜959px：タブレット
 ------------------------------ */
-@media screen and (min-width:600px) and (max-width:959px) {
+@media screen and (min-width:600px) and (max-width:959px) {  
   .gradient {
       &__wrap {
         height: 40vh;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
         margin-top: 5vh;
       }
       &__title {
-        animation: AnimationTitle 5s ease infinite;
-        background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-        background-size: 200% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        
         font-size: 12vw;
-        font-family: KontanterBold;
         font-weight: 600;
         line-height: 1;
       }
     }
-    @keyframes AnimationTitle {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-  .aboutme {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      margin-top: 15vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__description {
-      margin:3em auto;
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-      width: 70%;
-    }
-  }
-  
-  .coder {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      margin-top: 15vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-      margin-bottom: 1em;
-    }
-    &__description {
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-    }
-  }
-  
-  .withyou {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      position: relative;
-      margin-top: 15vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__description {
-      margin:3em auto;
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-      width: 70%;
-    }
-  }
-  
-  .contactme {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      margin-top: 15vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__subtitle {
-      margin:1em auto;
-      color: white;
-      text-align: center;
-      font-size: 6vw;
-    }
-    &__box {
-      padding: 10px;
-      display: flex;
-      justify-content:center;
-      &__item {
-        padding: 10px;
-        color: white;
-        margin: 10px;
-        font-size: 5vw;
-      }
-    }
-  }
-}
-  
+} 
 /* 960px〜1279px：小型PC
 ------------------------------ */
 @media screen and (min-width:960px) and (max-width:1279px) {
-  .home__wrap {
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-  
   .gradient {
       &__wrap {
         height: 40vh;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
         margin-top: 3vh;
       }
       &__title {
-        animation: AnimationTitle 5s ease infinite;
-        background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-        background-size: 200% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        
         font-size: 12vw;
-        font-family: KontanterBold;
         font-weight: 600;
         line-height: 1;
       }
     }
-    @keyframes AnimationTitle {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
-  .aboutme {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      margin-top: 15vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__description {
-      margin:3em auto;
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-      width: 70%;
-    }
-  }
-  
-  .coder {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      margin-top: 15vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-      margin-bottom: 1em;
-    }
-    &__description {
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-    }
-  }
-  
-  .withyou {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      position: relative;
-      margin-top: 15vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__description {
-      margin:3em auto;
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
-      width: 70%;
-    }
-  }
-  
-  .contactme {
-    &__wrap {
-      display: flex;
-      flex-flow: column;
-      margin-top: 15vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size: 5vw;
-    }
-    &__subtitle {
-      margin:1em auto;
-      color: white;
-      text-align: center;
-      font-size: 6vw;
-    }
-    &__box {
-      padding: 10px;
-      display: flex;
-      justify-content:center;
-      &__item {
-        padding: 10px;
-        color: white;
-        margin: 10px;
-        font-size: 5vw;
-      }
-    }
-  }
-}
-  
+} 
 /* 1280px〜：大型PC
 ------------------------------ */
 @media screen and (min-width:1280px) {
@@ -543,126 +196,52 @@
   .gradient {
       &__wrap {
         height: 40vh;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
         margin-top: 5vh;
         max-height: 500px;
       }
       &__title {
-        animation: AnimationTitle 5s ease infinite;
-        background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-        background-size: 200% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
         font-size:min(12vw,190px);
-        font-family: KontanterBold;
         font-weight: 600;
         line-height: 1;
       }
     }
-    @keyframes AnimationTitle {
-        0%{background-position:0% 50%}
-        50%{background-position:100% 50%}
-        100%{background-position:0% 50%}
-    }
   .aboutme {
     &__wrap {
-      display: flex;
-      flex-flow: column;
       margin-top: 30vh;
     }
     &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
       font-size:min(5vw,100px);
     }
     &__description {
       margin:3em auto;
-      color: white;
-      text-align: center;
       font-size:min(2vw,35px);
       line-height:1.4em;
       width: 70%;
     }
   }
-  
   .coder {
     &__wrap {
-      display: flex;
-      flex-flow: column;
       margin-top: 30vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size:min(5vw,100px);
-      margin-bottom: 1em;
-    }
-    &__description {
-      color: white;
-      text-align: center;
-      font-size: 2vw;
-      line-height:1.4em;
     }
   }
-  
   .withyou {
     &__wrap {
-      display: flex;
-      flex-flow: column;
-      position: relative;
       margin-top: 30vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size:min(5vw,100px);
     }
     &__description {
       margin:3em auto;
-      color: white;
-      text-align: center;
       font-size:min(2vw,35px);
       line-height:1.4em;
       width: 70%;
     }
   }
-  
   .contactme {
     &__wrap {
-      display: flex;
-      flex-flow: column;
       margin-top: 30vh;
-    }
-    &__title {
-      color: white;
-      text-align: center;
-      font-family: KontanterBold;
-      font-size:min(5vw,100px);
     }
     &__subtitle {
       margin:1em auto;
-      color: white;
-      text-align: center;
       font-size:min(6vw,70px);
-    }
-    &__box {
-      padding: 10px;
-      display: flex;
-      justify-content:center;
-      &__item {
-        padding: 10px;
-        color: white;
-        margin: 10px;
-        font-size:min(5vw,70px);
-      }
     }
   }
 }
