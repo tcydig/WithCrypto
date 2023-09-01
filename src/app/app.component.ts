@@ -2,6 +2,8 @@ import { Component, OnInit} from '@angular/core';
 import {Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import {Title, Meta} from "@angular/platform-browser";
 import { filter, map, mergeMap } from 'rxjs/operators';
+import { AnimationItem } from 'lottie-web';
+import { AnimationOptions } from 'ngx-lottie';
 
 
 @Component({
@@ -10,6 +12,15 @@ import { filter, map, mergeMap } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  options: AnimationOptions = {
+    path: '../assets/Animation - 1693556957349.json',
+  };
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
+  }
+
   title = 'WithCrypto';
   constructor(public router: Router, private route: ActivatedRoute, private titleService: Title, private meta: Meta) {}
 

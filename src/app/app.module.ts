@@ -16,6 +16,12 @@ import {MatListModule} from '@angular/material/list';
 
 // lazy load
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -33,7 +39,8 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     MatDividerModule,
     MatListModule,
     CaesarCipherComponent,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    LottieModule.forRoot({ player: playerFactory })
   ],
   providers: [],
   bootstrap: [AppComponent]

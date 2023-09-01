@@ -1,0 +1,38 @@
+.shutter{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#1e1e1e;
+    z-index:9999;
+    animation: byeShutter 3.0s forwards;
+    
+    &::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      margin:auto;
+      background-color:#f3f3f3;
+      width:0;
+      height:1px;
+      animation: shutterOpen 3.0s forwards;
+    }
+  }
+  
+  .content{
+    animation: contentScale 3.0s forwards;
+  }
+  
+  @keyframes byeShutter{
+    70%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+      display:none;
+      z-index:-1;
+    }
+  }
